@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688884121524178463}
   - component: {fileID: 1688884121524178460}
+  - component: {fileID: 6502951773764810381}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -81,3 +82,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6502951773764810381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688884121524178461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4039d71c890d84940beaa42e161078af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 4776486034910592488, guid: 4dc4d5abb682f384ea4d11c942e856d8, type: 3}
+  - {fileID: 5327518754441955768, guid: a2af65c0ca3bcd044ad1f32e945488b2, type: 3}
+  - {fileID: 3732714416878609011, guid: 0175af677b3b8ec4aa585f7c4ddc65cd, type: 3}
+  - {fileID: 4506251786502983978, guid: 2e31dcd672f88264a84fdc39162e5cb4, type: 3}
+  moveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: afd97a5d2bc7a2e43bc13d5119cb4b6e, type: 2}
