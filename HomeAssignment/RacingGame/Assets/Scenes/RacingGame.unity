@@ -141,6 +141,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   padding: 1
+--- !u!1 &708706902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708706904}
+  - component: {fileID: 708706903}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &708706903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708706902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfef83fb1b2fd24089c473c2bc86ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfigs:
+  - {fileID: 11400000, guid: afd97a5d2bc7a2e43bc13d5119cb4b6e, type: 2}
+  - {fileID: 11400000, guid: 292cc4d1c7f4e7b42bfe6c6113fcad1f, type: 2}
+  - {fileID: 11400000, guid: 49d1714339dfd2c45aa0963a6f8fa9fb, type: 2}
+  looping: 0
+--- !u!4 &708706904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708706902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738423183
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +363,7 @@ PrefabInstance:
     - target: {fileID: 558215545310558613, guid: 8d27bce908a90764383f762fc7f5a200,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.111
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 558215545310558613, guid: 8d27bce908a90764383f762fc7f5a200,
         type: 3}
@@ -370,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 558215545310558613, guid: 8d27bce908a90764383f762fc7f5a200,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.0356493
+      value: 7.5366783
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d27bce908a90764383f762fc7f5a200, type: 3}
