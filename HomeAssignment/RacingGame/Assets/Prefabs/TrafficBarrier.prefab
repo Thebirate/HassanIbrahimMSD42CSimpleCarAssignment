@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7947928292125648808}
   - component: {fileID: 7947928292125648809}
+  - component: {fileID: -4170791040366407426}
   m_Layer: 0
   m_Name: TrafficBarrier
   m_TagString: Untagged
@@ -81,3 +82,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4170791040366407426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947928292125648810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4039d71c890d84940beaa42e161078af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  moveSpeed: 2
+  waveConfig: {fileID: 11400000, guid: 7ba2704685a69244a80a602b63acee81, type: 2}
