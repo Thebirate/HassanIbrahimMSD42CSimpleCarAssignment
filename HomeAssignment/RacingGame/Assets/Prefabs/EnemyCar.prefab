@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2198001014764958415}
   - component: {fileID: -5418668566499843964}
   - component: {fileID: 2850484534173720574}
-  - component: {fileID: 1247646436379022063}
+  - component: {fileID: 9000155376543838326}
   m_Layer: 0
   m_Name: EnemyCar
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  moveSpeed: 2
+  moveSpeed: 1.5
   waveConfig: {fileID: 11400000, guid: 49d1714339dfd2c45aa0963a6f8fa9fb, type: 2}
 --- !u!114 &-5418668566499843964
 MonoBehaviour:
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   shotCounter: 0
-  minTimeBetweenShots: 0.2
+  minTimeBetweenShots: 1
   maxTimeBetweenShots: 0.03
   enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
     type: 3}
-  enemyLaserSpeed: 10
+  enemyLaserSpeed: 6
 --- !u!114 &2850484534173720574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
---- !u!50 &1247646436379022063
+--- !u!50 &9000155376543838326
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2611932361033420450}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

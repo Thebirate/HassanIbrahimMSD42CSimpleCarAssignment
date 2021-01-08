@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8172730057323146553}
   - component: {fileID: 7263605312676888888}
   - component: {fileID: 5835537288774341812}
-  - component: {fileID: 8649284946907561658}
+  - component: {fileID: -2271585764209804048}
   m_Layer: 0
   m_Name: EnemyBike
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  moveSpeed: 2
+  moveSpeed: 1
   waveConfig: {fileID: 11400000, guid: 619ec7d9e264b1e40afbaccab2e21e67, type: 2}
 --- !u!114 &7263605312676888888
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   shotCounter: 0
-  minTimeBetweenShots: 0.2
+  minTimeBetweenShots: 0.7
   maxTimeBetweenShots: 0.03
   enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
     type: 3}
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
---- !u!50 &8649284946907561658
+--- !u!50 &-2271585764209804048
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325067636419718579}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
