@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4913800645486432104}
   - component: {fileID: 5492199084658489676}
   - component: {fileID: -2198001014764958415}
-  - component: {fileID: -5418668566499843964}
   - component: {fileID: 2850484534173720574}
   - component: {fileID: 9000155376543838326}
+  - component: {fileID: 4619784480574770415}
   m_Layer: 0
   m_Name: EnemyCar
   m_TagString: Untagged
@@ -100,25 +100,6 @@ MonoBehaviour:
   waypoints: []
   moveSpeed: 1.5
   waveConfig: {fileID: 11400000, guid: 49d1714339dfd2c45aa0963a6f8fa9fb, type: 2}
---- !u!114 &-5418668566499843964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2611932361033420450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b28c71711c3a1145871495d08263f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
-  minTimeBetweenShots: 1
-  maxTimeBetweenShots: 0.03
-  enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
-    type: 3}
-  enemyLaserSpeed: 6
 --- !u!114 &2850484534173720574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 3
 --- !u!50 &9000155376543838326
 Rigidbody2D:
   serializedVersion: 4
@@ -153,3 +134,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4619784480574770415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611932361033420450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b28c71711c3a1145871495d08263f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.1
+  enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
+    type: 3}
+  enemyLaserSpeed: 20

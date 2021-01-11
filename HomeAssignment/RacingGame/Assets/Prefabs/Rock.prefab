@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7770883912238352882}
   - component: {fileID: 7770883912238352883}
   - component: {fileID: 7680367787807686086}
-  - component: {fileID: 1960145128216573252}
+  - component: {fileID: 8008306477783765423}
+  - component: {fileID: -6411959398051462335}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -98,7 +99,7 @@ MonoBehaviour:
   waypoints: []
   moveSpeed: 1
   waveConfig: {fileID: 11400000, guid: 292cc4d1c7f4e7b42bfe6c6113fcad1f, type: 2}
---- !u!114 &1960145128216573252
+--- !u!114 &8008306477783765423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,12 +108,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 7770883912238352880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b28c71711c3a1145871495d08263f43, type: 3}
+  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
-  enemyLaserPrefab: {fileID: 0}
-  enemyLaserSpeed: 20
+  damage: 50
+--- !u!50 &-6411959398051462335
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770883912238352880}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

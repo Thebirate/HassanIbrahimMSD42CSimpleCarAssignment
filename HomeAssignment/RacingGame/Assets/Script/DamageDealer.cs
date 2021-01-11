@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] int damage = 100;
+    [SerializeField] int damage = 0;
 
     //returning the damage value so that there cannot be access to the variable directly
     public int GetDamage()

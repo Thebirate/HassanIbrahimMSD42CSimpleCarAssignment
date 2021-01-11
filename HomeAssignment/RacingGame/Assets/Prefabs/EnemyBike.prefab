@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 7587261948473274143}
   - component: {fileID: 492237708051342986}
   - component: {fileID: -8172730057323146553}
-  - component: {fileID: 7263605312676888888}
-  - component: {fileID: 5835537288774341812}
-  - component: {fileID: -2271585764209804048}
+  - component: {fileID: -7243845967520398638}
+  - component: {fileID: 6816140066329144935}
   m_Layer: 0
   m_Name: EnemyBike
   m_TagString: Untagged
@@ -100,7 +99,20 @@ MonoBehaviour:
   waypoints: []
   moveSpeed: 1
   waveConfig: {fileID: 11400000, guid: 619ec7d9e264b1e40afbaccab2e21e67, type: 2}
---- !u!114 &7263605312676888888
+--- !u!114 &-7243845967520398638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325067636419718579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!114 &6816140066329144935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,42 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   shotCounter: 0
-  minTimeBetweenShots: 0.7
-  maxTimeBetweenShots: 0.03
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 0.1
   enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
     type: 3}
   enemyLaserSpeed: 20
---- !u!114 &5835537288774341812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325067636419718579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
---- !u!50 &-2271585764209804048
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325067636419718579}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

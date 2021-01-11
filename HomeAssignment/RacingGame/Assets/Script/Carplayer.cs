@@ -6,7 +6,7 @@ public class Carplayer : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 10f;
     [SerializeField] float padding = 1f;
-
+    [SerializeField] int playerHealth = 50;
     float xMin;
     float xMax;
     float yMin;
@@ -48,6 +48,31 @@ public class Carplayer : MonoBehaviour
 
     }
 
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        playerHealth -= damageDealer.GetDamage(); // health = health - damagedDealer.GetDamage();
+        // A -= B; => A = A - B;
+        damageDealer.Hit();
 
+        if (playerHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //We are retrieving the damage dealer of the current laser which hit the enemy since different
+        //lasers CAN have different damage values
+        DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+
+        if (!damageDealer) //checking if the damageDealer variable is empty/null
+        {
+            return; // makes the method stop and return back, thus ProcessHit() will never be called IF
+            // the damageDealer is empty.
+        }
+
+        ProcessHit(damageDealer);
+    }
 
 }

@@ -15,31 +15,27 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject enemyLaserPrefab;
     [SerializeField] float enemyLaserSpeed = 20f;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         CountDownAndShoot();
     }
-    /* To handle collisions we can either use OnCollisionEnter2D or OnTriggerEnter2D (2D needs to be used if
-     * the colliders are 2D). OnTriggerEnter2D needs to be used if at least one of the colliders is a 
-     * trigger collider (has is trigger ticked).
-     */
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //We are retrieving the damage dealer of the current laser which hit the enemy since different
-        //lasers CAN have different damage values
+        
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+        health -= damageDealer.GetDamage();
 
         if (!damageDealer) //checking if the damageDealer variable is empty/null
         {
-            return; // makes the method stop and return back, thus ProcessHit() will never be called IF
-            // the damageDealer is empty.
+            return; 
         }
 
         ProcessHit(damageDealer);
@@ -76,10 +72,10 @@ public class Enemy : MonoBehaviour
 
     void EnemyFire()
     {
-        GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
-        //GameObject enemyLaserClone = Instantiate(enemyLaserPrefab, transform.position, Quaternion.Euler(0,0,180));
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
+        //GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
+        GameObject enemyLaserClone = Instantiate(enemyLaserPrefab, transform.position, Quaternion.Euler(0,0,180));
+        //enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
 
-        //enemyLaserClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
+        enemyLaserClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
     }
 }

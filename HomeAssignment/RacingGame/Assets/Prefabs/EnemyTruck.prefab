@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7237150290848000645}
   - component: {fileID: 5226411585832435975}
   - component: {fileID: -6962318814141495855}
-  - component: {fileID: 1095682323012111505}
-  - component: {fileID: 7227631230675590542}
-  - component: {fileID: -2593111509135184848}
+  - component: {fileID: -8961266431084566697}
+  - component: {fileID: -592762429253793371}
+  - component: {fileID: 3088818065312989744}
   m_Layer: 0
   m_Name: EnemyTruck
   m_TagString: Untagged
@@ -99,8 +99,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   moveSpeed: 2
-  waveConfig: {fileID: 0}
---- !u!50 &1095682323012111505
+  waveConfig: {fileID: 11400000, guid: afd97a5d2bc7a2e43bc13d5119cb4b6e, type: 2}
+--- !u!114 &-8961266431084566697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914154007907096260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+--- !u!50 &-592762429253793371
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -121,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &7227631230675590542
+--- !u!61 &3088818065312989744
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,16 +160,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82, y: 1.88}
   m_EdgeRadius: 0
---- !u!114 &-2593111509135184848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3914154007907096260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
