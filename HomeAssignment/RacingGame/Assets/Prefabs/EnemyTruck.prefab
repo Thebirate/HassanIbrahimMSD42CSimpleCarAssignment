@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5226411585832435975}
   - component: {fileID: -6962318814141495855}
   - component: {fileID: -8961266431084566697}
-  - component: {fileID: -592762429253793371}
   - component: {fileID: 3088818065312989744}
   m_Layer: 0
   m_Name: EnemyTruck
@@ -113,27 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
---- !u!50 &-592762429253793371
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3914154007907096260}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &3088818065312989744
 BoxCollider2D:
   m_ObjectHideFlags: 0
