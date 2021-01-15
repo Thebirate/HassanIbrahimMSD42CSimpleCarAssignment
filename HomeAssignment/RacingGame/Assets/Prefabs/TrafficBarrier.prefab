@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7947928292125648809}
   - component: {fileID: -4170791040366407426}
   - component: {fileID: 2444395978159052634}
-  - component: {fileID: 5973809945260357583}
-  - component: {fileID: -1219026391136052748}
+  - component: {fileID: -8131142799976044249}
+  - component: {fileID: 4141170985235997298}
   m_Layer: 0
   m_Name: TrafficBarrier
   m_TagString: Untagged
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
---- !u!50 &5973809945260357583
+--- !u!50 &-8131142799976044249
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -128,14 +128,14 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-1219026391136052748
-BoxCollider2D:
+--- !u!60 &4141170985235997298
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -157,6 +157,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.57, y: 0.54}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.275, y: -0.25}
+      - {x: 0.285, y: -0.099999994}
+      - {x: 0.285, y: 0.22}
+      - {x: 0.265, y: 0.25}
+      - {x: -0.255, y: 0.25}
+      - {x: -0.275, y: 0.21}
+      - {x: -0.275, y: -0.16}
+      - {x: -0.235, y: -0.26}
+      - {x: -0.175, y: -0.26}
+      - {x: -0.155, y: -0.24}
+      - {x: 0.035, y: -0.26}
+      - {x: 0.235, y: -0.26}
+    - - {x: -0.155, y: 0.01}
+      - {x: 0.16499999, y: 0.01}
+      - {x: 0.16499999, y: -0.049999997}
+      - {x: -0.155, y: -0.049999997}

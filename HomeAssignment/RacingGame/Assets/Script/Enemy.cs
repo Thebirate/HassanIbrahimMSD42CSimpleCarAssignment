@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health = 100;
-    [SerializeField] float shotCounter; // random time for the enemy to wait before shooting the next 
-    //laser. The time will be reduced every frame so that once the time is up, the enemy can shoot the
-    //laser.
-    [SerializeField] float minTimeBetweenShots = 0.2f; // a range for the random number is required and
-    //we need the shortest possible time to wait to shoot and the longest possible time to wait to shoot.
+   
+    [SerializeField] float shotCounter; 
+    [SerializeField] float minTimeBetweenShots = 0.2f; 
     [SerializeField] float maxTimeBetweenShots = 3f;
 
     [SerializeField] GameObject enemyLaserPrefab;
@@ -31,26 +28,16 @@ public class Enemy : MonoBehaviour
     {
         
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        health -= damageDealer.GetDamage();
 
         if (!damageDealer) //checking if the damageDealer variable is empty/null
         {
             return; 
         }
 
-        ProcessHit(damageDealer);
+        
     }
 
-    private void ProcessHit(DamageDealer damageDealer)
-    {
-        health -= damageDealer.GetDamage(); // health = health - damagedDealer.GetDamage();
-        // A -= B; => A = A - B;
-        damageDealer.Hit();
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 
     void CountDownAndShoot()
     {

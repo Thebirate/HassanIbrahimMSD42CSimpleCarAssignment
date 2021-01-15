@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4133374832143984493}
   - component: {fileID: 4133374832143984494}
-  - component: {fileID: -385212265649037516}
-  - component: {fileID: 1205322071884232743}
+  - component: {fileID: 7865221898589338963}
+  - component: {fileID: 5392854151795841520}
   m_Layer: 0
   m_Name: Car player
   m_TagString: Untagged
@@ -83,21 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-385212265649037516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133374832143984495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
---- !u!70 &1205322071884232743
-CapsuleCollider2D:
+--- !u!60 &7865221898589338963
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,5 +97,36 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.44, y: 0.85}
-  m_Direction: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.44, y: 0.85}
+    newSize: {x: 0.44, y: 0.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.14999999, y: 0.42499998}
+      - {x: -0.19999999, y: 0.355}
+      - {x: -0.22, y: 0.24499999}
+      - {x: -0.22, y: -0.42499998}
+      - {x: 0.21, y: -0.42499998}
+      - {x: 0.21, y: 0.345}
+      - {x: 0.14999999, y: 0.42499998}
+--- !u!114 &5392854151795841520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133374832143984495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7097148716c7d448674138f4f9e413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  padding: 1
+  playerHealth: 50
