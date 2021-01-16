@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Carplayer : MonoBehaviour
 {
+    
     [SerializeField] float movementSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] int playerHealth = 50;
+    [SerializeField] private GameObject deathVFX;
+    [SerializeField] private AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] private float playerDeathSoundVolume = 0.75f;
     float xMin;
     float xMax;
     float yMin;
@@ -56,8 +60,18 @@ public class Carplayer : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+        Destroy(explosion, 1f);
+        Destroy(gameObject);
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

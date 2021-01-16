@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2444395978159052634}
   - component: {fileID: -8131142799976044249}
   - component: {fileID: 4141170985235997298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrafficBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}

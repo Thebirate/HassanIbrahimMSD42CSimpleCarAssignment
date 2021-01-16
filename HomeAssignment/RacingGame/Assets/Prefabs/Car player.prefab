@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4133374832143984494}
   - component: {fileID: 7865221898589338963}
   - component: {fileID: 5392854151795841520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,3 +130,7 @@ MonoBehaviour:
   movementSpeed: 10
   padding: 1
   playerHealth: 50
+  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
+    type: 3}
+  playerDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
+  playerDeathSoundVolume: 0.75

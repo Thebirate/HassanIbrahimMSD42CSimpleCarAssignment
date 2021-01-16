@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6816140066329144935}
   - component: {fileID: 37970436461508038}
   - component: {fileID: 6318294402532236753}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyBike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +133,10 @@ MonoBehaviour:
   enemyLaserPrefab: {fileID: 6505991852200531504, guid: 872a1ba5943bbff4aabae8ed0a900b4e,
     type: 3}
   enemyLaserSpeed: 10
+  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
+    type: 3}
+  EnemyDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
+  enemyDeathSoundVolume: 0.75
 --- !u!60 &37970436461508038
 PolygonCollider2D:
   m_ObjectHideFlags: 0
