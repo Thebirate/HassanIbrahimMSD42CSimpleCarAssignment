@@ -11,10 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RacingGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Won.unity
+    guid: 355c95fe3468470408ec5869e1ee38d3
+  - enabled: 1
+    path: Assets/Scenes/Over.unity
+    guid: ef9229a9a61813d4b8c34ae9ad0c854e
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/StartMenu1.unity
-    guid: 6a048a75f892f2c4a802fd4ab44b640e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 187a05ab803dfad4b9eb2520e62ad1f6
   m_configObjects: {}

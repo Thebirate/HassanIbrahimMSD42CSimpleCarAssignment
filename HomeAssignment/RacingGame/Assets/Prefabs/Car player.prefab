@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4133374832143984493}
   - component: {fileID: 4133374832143984494}
+  - component: {fileID: -4653285253046010861}
   - component: {fileID: 7865221898589338963}
-  - component: {fileID: 5392854151795841520}
   m_Layer: 8
   m_Name: Car player
   m_TagString: Untagged
@@ -83,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4653285253046010861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133374832143984495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7097148716c7d448674138f4f9e413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  padding: 1
+  playerHealth: 50
+  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
+    type: 3}
+  playerDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
+  playerDeathSoundVolume: 0.75
 --- !u!60 &7865221898589338963
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -115,22 +134,3 @@ PolygonCollider2D:
       - {x: 0.21, y: -0.42499998}
       - {x: 0.21, y: 0.345}
       - {x: 0.14999999, y: 0.42499998}
---- !u!114 &5392854151795841520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133374832143984495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7097148716c7d448674138f4f9e413, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  padding: 1
-  playerHealth: 50
-  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
-    type: 3}
-  playerDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
-  playerDeathSoundVolume: 0.75

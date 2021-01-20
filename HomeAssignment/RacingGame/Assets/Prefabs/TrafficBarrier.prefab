@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2444395978159052634}
   - component: {fileID: -8131142799976044249}
   - component: {fileID: 4141170985235997298}
+  - component: {fileID: -6758543466929695031}
   m_Layer: 9
   m_Name: TrafficBarrier
   m_TagString: Untagged
@@ -175,3 +176,24 @@ PolygonCollider2D:
       - {x: 0.16499999, y: 0.01}
       - {x: 0.16499999, y: -0.049999997}
       - {x: -0.155, y: -0.049999997}
+--- !u!114 &-6758543466929695031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7947928292125648810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ca9c0446740284c9302052bee07b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 5
+  health: 10
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
+    type: 3}
+  EnemyDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
+  enemyDeathSoundVolume: 0.75

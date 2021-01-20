@@ -13,13 +13,17 @@ public class Level : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("RacingGame");
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene("StartMenu1");
+        SceneManager.LoadScene("Over");
     }
-
+    public void LoadWon()
+    {
+        SceneManager.LoadScene("Won");
+    }
     public void Quit()
     {
         print("quitting game");

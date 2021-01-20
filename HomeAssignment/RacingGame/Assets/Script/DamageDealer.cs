@@ -9,11 +9,14 @@ public class DamageDealer : MonoBehaviour
     
     public int GetDamage()
     {
+        
+        
         return damage;
     }
 
     public void Hit()
     {
+       // gameObject.GetComponent<Carplayer>().Score += 5;
         Destroy(gameObject);
     }
 }

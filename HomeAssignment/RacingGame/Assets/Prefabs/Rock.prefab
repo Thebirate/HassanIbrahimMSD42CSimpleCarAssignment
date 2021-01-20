@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8008306477783765423}
   - component: {fileID: -6411959398051462335}
   - component: {fileID: 2525830598472698313}
+  - component: {fileID: 8596821319945844991}
   m_Layer: 9
   m_Name: Rock
   m_TagString: Untagged
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffabc130608eb574699fd8af8b03c68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 2
 --- !u!50 &-6411959398051462335
 Rigidbody2D:
   serializedVersion: 4
@@ -175,3 +176,24 @@ PolygonCollider2D:
       - {x: 0.32999998, y: -0.22}
       - {x: 0.38, y: -0.14999999}
       - {x: 0.38, y: -0.07}
+--- !u!114 &8596821319945844991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770883912238352880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ca9c0446740284c9302052bee07b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 5
+  health: 10
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  deathVFX: {fileID: 5181999632425658296, guid: 29221173f98c5254eae123f107c188b2,
+    type: 3}
+  EnemyDeathSound: {fileID: 8300000, guid: f5812647d79fa1f48ac44d45fed54507, type: 3}
+  enemyDeathSoundVolume: 0.75

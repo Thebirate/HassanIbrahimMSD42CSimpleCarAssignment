@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
+    
     [SerializeField] int health = 10;
     [SerializeField] float shotCounter; 
     [SerializeField] float minTimeBetweenShots = 0.2f; 
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         AudioSource.PlayClipAtPoint(EnemyDeathSound, Camera.main.transform.position,enemyDeathSoundVolume);
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>(); 
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
@@ -40,29 +42,14 @@ public class Enemy : MonoBehaviour
         {
             return; 
         }
-
-        
-    }
-
-    private void ProcessHit(DamageDealer damageDealer)
-    {
-        health -= damageDealer.GetDamage(); // health = health - damagedDealer.GetDamage();
-        // A -= B; => A = A - B;
-        damageDealer.Hit();
-        if (health <= 0)
+        FindObjectOfType<GameSession>().AddToScore(8);
+        if (FindObjectOfType<Shredder>().transform.position == gameObject.transform.position)
         {
-            Die();
+            
         }
     }
 
-    private void Die()
-    {
-
-        //GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
-
-        //Destroy(explosion, 1f);
-        Destroy(gameObject);
-    }
+    
 
     void CountDownAndShoot()
     {
@@ -83,6 +70,8 @@ public class Enemy : MonoBehaviour
 
     void EnemyFire()
     {
+        
+        
         //GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity) as GameObject;
         GameObject enemyLaserClone = Instantiate(enemyLaserPrefab, transform.position, Quaternion.Euler(0,0,180));
         //enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);

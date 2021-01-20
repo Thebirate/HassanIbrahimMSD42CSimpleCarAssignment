@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading;
+
+
 public class Carplayer : MonoBehaviour
 {
+
     
     [SerializeField] float movementSpeed = 10f;
     [SerializeField] float padding = 1f;
@@ -19,12 +23,25 @@ public class Carplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         SetUpMoveBoundaries();
     }
     // Update is called once per frame
     void Update()
     {
+        int score = FindObjectOfType<GameSession>().GetScore();
         Move();
+        if (score == 100)
+        {
+            AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+            GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+
+            Destroy(explosion, 1f);
+            Destroy(gameObject);
+
+            Thread.Sleep(2000);
+            FindObjectOfType<Level>().LoadWon();
+        }
     }
 
     private void Move()
@@ -57,11 +74,14 @@ public class Carplayer : MonoBehaviour
         playerHealth -= damageDealer.GetDamage(); // health = health - damagedDealer.GetDamage();
         // A -= B; => A = A - B;
         damageDealer.Hit();
-
+        
         if (playerHealth <= 0)
         {
+          
             Die();
+            FindObjectOfType<Level>().LoadGameOver();
         }
+       
     }
 
     private void Die()
@@ -71,7 +91,7 @@ public class Carplayer : MonoBehaviour
 
         Destroy(explosion, 1f);
         Destroy(gameObject);
-        FindObjectOfType<Level>().LoadGameOver();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -88,5 +108,8 @@ public class Carplayer : MonoBehaviour
 
         ProcessHit(damageDealer);
     }
-
+    public int GetHealth()
+    {
+        return playerHealth;
+    }
 }
